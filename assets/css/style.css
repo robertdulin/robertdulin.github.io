@@ -41,7 +41,7 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 44px 24px 80px; }
 
 .home-hero { display: flex; gap: 36px; align-items: flex-start; }
 .home-hero img {
-  width: 185px; height: 185px; object-fit: cover; object-position: top center;
+  width: 185px; height: 230px; object-fit: cover; object-position: center center;
   border-radius: 4px; flex-shrink: 0; border: 1px solid var(--border);
 }
 .home-bio h1 { font-size: 1.65rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 3px; }
