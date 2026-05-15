@@ -46,12 +46,15 @@
         <a href="https://www.econthatmatters.com/2026/02/tell-me-why-how-mechanistic-explanations-improve-technology-adoption/" class="paper-chip" target="_blank">Media</a>
       </div>
       <div class="paper-authors">
-        with <a href="https://sites.google.com/view/anirudh-sankar">Anirudh Sankar</a>,
-        Ben Davies, Vesall Nourani, Jess Rudder, Godfrey Taulya, and Abraham Salomon
+        with <a href="https://sites.google.com/view/anirudh-sankar" target="_blank">Anirudh Sankar</a>,
+        <a href="https://bldavies.com/" target="_blank">Ben Davies</a>,
+        <a href="https://sites.google.com/site/vesallnourani/home" target="_blank">Vesall Nourani</a>,
+        <a href="https://sites.google.com/ucdavis.edu/jessrudder/home" target="_blank">Jess Rudder</a>,
+        Godfrey Taulya, and Abraham Salomon
       </div>
       <div class="paper-meta">
         2026 · Funded by IGC, the King Center on Global Development, and the Weiss Fund.
-        In collaboration with <a href="https://www.agriworksug.com/">Agriworks Uganda</a>.
+        In collaboration with Agriworks Uganda.
       </div>
       <button class="abstract-toggle" onclick="toggleAbstract(this)">
         <span class="arrow">▶</span> Abstract
@@ -85,7 +88,7 @@
       <div class="paper-links">
         <a href="https://www.socialscienceregistry.org/trials/18049" class="paper-chip" target="_blank">Pre-registration</a>
       </div>
-      <div class="paper-authors">with Jess Rudder and Anirudh Sankar</div>
+      <div class="paper-authors">with <a href="https://sites.google.com/ucdavis.edu/jessrudder/home" target="_blank">Jess Rudder</a> and <a href="https://sites.google.com/view/anirudh-sankar" target="_blank">Anirudh Sankar</a></div>
       <div class="paper-meta">
         2026 · Funded by the Weiss Fund.
         In collaboration with <a href="https://www.isda-africa.com/">iSDA</a>. Intervention underway.
@@ -123,7 +126,7 @@
       <div class="paper-links">
         <a href="https://www.socialscienceregistry.org/trials/16563" class="paper-chip" target="_blank">Pre-registration</a>
       </div>
-      <div class="paper-authors">with Vesall Nourani and Sara Restrepo Tamayo</div>
+      <div class="paper-authors">with <a href="https://sites.google.com/site/vesallnourani/home" target="_blank">Vesall Nourani</a> and <a href="https://saritart1.github.io/" target="_blank">Sara Restrepo Tamayo</a></div>
       <div class="paper-meta">
         2026 · Funded by the J-PAL Learning for All Initiative. In collaboration with the
         <a href="https://www.kimanya.org/">Kimanya-Ngeyo Foundation for Science and Technology</a>.
@@ -213,6 +216,7 @@ function toggleAbstract(btn) {
   btn.nextElementSibling.classList.toggle('open');
 }
 function toggleNav() { document.querySelector('nav').classList.toggle('open'); }
+document.querySelectorAll('a[href^="http"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener noreferrer'; });
 </script>
 
 </body>

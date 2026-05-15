@@ -92,6 +92,7 @@ function toggleNav() {
   document.querySelector('nav').classList.toggle('open');
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.querySelectorAll('a[href^="http"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener noreferrer'; });
 </script>
 
 </body>

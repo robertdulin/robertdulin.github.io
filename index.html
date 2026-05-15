@@ -78,6 +78,7 @@
 
 <script>
 function toggleNav() { document.querySelector('nav').classList.toggle('open'); }
+document.querySelectorAll('a[href^="http"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener noreferrer'; });
 </script>
 </body>
 </html>
