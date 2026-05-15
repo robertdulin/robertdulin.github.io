@@ -106,6 +106,18 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 44px 24px 80px; }
 }
 .btn:hover { background: #c45f00; text-decoration: none; }
 
+.gallery-intro { font-size: 0.94rem; color: var(--gray-dark); margin-bottom: 28px; line-height: 1.7; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 10px;
+}
+.gallery-item { overflow: hidden; border-radius: 4px; background: var(--gray-light); }
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+
 footer { border-top: 1px solid var(--border); padding: 18px 24px; text-align: center; font-size: 0.77rem; color: var(--gray-mid); }
 
 @media (max-width: 580px) {
