@@ -8,6 +8,7 @@
   --link: #2a5db0;
   --max-width: 760px;
   --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'EB Garamond', Georgia, serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,14 +45,31 @@ main { max-width: var(--max-width); margin: 0 auto; padding: 44px 24px 80px; }
   width: 185px; height: 230px; object-fit: cover; object-position: center center;
   border-radius: 4px; flex-shrink: 0; border: 1px solid var(--border);
 }
-.home-bio h1 { font-size: 1.65rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 3px; }
-.home-bio .subtitle { font-size: 0.85rem; color: var(--gray-mid); margin-bottom: 18px; }
+.home-bio h1 { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 3px; }
+.home-bio .subtitle { font-size: 0.85rem; color: var(--gray-mid); margin-bottom: 6px; }
+.fields { font-size: 0.8rem; color: var(--gray-mid); margin-bottom: 16px; letter-spacing: 0.01em; }
 .home-bio p { font-size: 0.94rem; line-height: 1.78; color: var(--gray-dark); }
 .home-bio p + p { margin-top: 13px; }
 .contact-links { margin-top: 20px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .contact-links a { font-size: 0.82rem; font-weight: 500; color: var(--gray-dark); }
 .contact-links a:hover { color: var(--link); text-decoration: none; }
 .contact-links .sep { color: var(--border); }
+
+.news-section { margin-top: 44px; }
+.news-item { display: flex; gap: 18px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.news-item:last-child { border-bottom: none; }
+.news-date { flex-shrink: 0; min-width: 82px; color: var(--orange); font-size: 0.8rem; font-weight: 600; padding-top: 2px; }
+.news-item p { font-size: 0.875rem; color: var(--gray-dark); line-height: 1.55; }
+
+.paper-links { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+.paper-chip {
+  display: inline-block; padding: 2px 9px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  border: 1px solid var(--border); border-radius: 3px;
+  color: var(--gray-dark); background: var(--gray-light);
+  transition: border-color 0.15s, color 0.15s;
+}
+.paper-chip:hover { border-color: var(--link); color: var(--link); text-decoration: none; }
 
 .research-section { margin-bottom: 48px; }
 .section-head {
