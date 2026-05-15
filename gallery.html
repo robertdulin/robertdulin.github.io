@@ -15,6 +15,7 @@
 <header>
   <div class="header-inner">
     <div class="site-title"><a href="index.html">Robert Dulin</a></div>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
@@ -24,34 +25,39 @@
   </div>
 </header>
 
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <main>
   <div class="gallery-grid">
 
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/IMG_5287.jpg', 'Walking through fields in Uganda')">
       <img src="assets/img/IMG_5287.jpg" alt="Walking through fields in Uganda">
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB220662.jpg', 'Farmers at fertilizer demonstration')">
       <img src="assets/img/PB220662.jpg" alt="Farmers at fertilizer demonstration">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB220663.jpg', 'Farmers viewing demonstration boards')">
       <img src="assets/img/PB220663.jpg" alt="Farmers viewing demonstration boards">
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB260666.jpg', 'Demonstration boards displayed outdoors')">
       <img src="assets/img/PB260666.jpg" alt="Demonstration boards displayed outdoors">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB220659-2.jpg', 'Motorbikes parked under a tree in Uganda')">
       <img src="assets/img/PB220659-2.jpg" alt="Motorbikes parked under a tree in Uganda">
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB220664.jpg', 'Extension officer presenting to farmers')">
       <img src="assets/img/PB220664.jpg" alt="Extension officer presenting to farmers">
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB260667-2.jpg', 'Field visit with farmers and researchers')">
       <img src="assets/img/PB260667-2.jpg" alt="Field visit with farmers and researchers">
     </div>
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openLightbox('assets/img/PB260670.jpg', 'Examining crops during field visit')">
       <img src="assets/img/PB260670.jpg" alt="Examining crops during field visit">
     </div>
 
@@ -61,6 +67,25 @@
 <footer>
   Robert Dulin · Princeton University · Last updated: May 2026
 </footer>
+
+<script>
+function openLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function toggleNav() {
+  document.querySelector('nav').classList.toggle('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 
 </body>
 </html>

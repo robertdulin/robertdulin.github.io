@@ -15,6 +15,7 @@
 <header>
   <div class="header-inner">
     <div class="site-title"><a href="index.html">Robert Dulin</a></div>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="research.html" class="active">Research</a>
@@ -41,7 +42,7 @@
         Ben Davies, Vesall Nourani, Jess Rudder, Godfrey Taulya, and Abraham Salomon
       </div>
       <div class="paper-meta">
-        Funded by IGC, the King Center on Global Development, and the Weiss Fund.
+        2026 · Funded by IGC, the King Center on Global Development, and the Weiss Fund.
         In collaboration with <a href="https://www.agriworksug.com/">Agriworks Uganda</a>.
       </div>
       <button class="abstract-toggle" onclick="toggleAbstract(this)">
@@ -78,7 +79,7 @@
       </div>
       <div class="paper-authors">with Jess Rudder and Anirudh Sankar</div>
       <div class="paper-meta">
-        Funded by the Weiss Fund.
+        2026 · Funded by the Weiss Fund.
         In collaboration with <a href="https://www.isda-africa.com/">iSDA</a>. Intervention underway.
       </div>
       <button class="abstract-toggle" onclick="toggleAbstract(this)">
@@ -116,7 +117,7 @@
       </div>
       <div class="paper-authors">with Vesall Nourani and Sara Restrepo Tamayo</div>
       <div class="paper-meta">
-        Funded by the J-PAL Learning for All Initiative. In collaboration with the
+        2026 · Funded by the J-PAL Learning for All Initiative. In collaboration with the
         <a href="https://www.kimanya.org/">Kimanya-Ngeyo Foundation for Science and Technology</a>.
         Baseline data collection complete. Intervention underway.
       </div>
@@ -172,7 +173,7 @@
       </div>
       <div class="paper-authors">with Pascaline Dupas, Dylan Groves, and John Marshall</div>
       <div class="paper-meta">
-        Funded by FID and the J-PAL Governance Initiative.
+        2026 · Funded by FID and the J-PAL Governance Initiative.
         In collaboration with <a href="https://wezesha.or.tz/">Wezesha Tanzania</a>. Intervention underway.
       </div>
       <button class="abstract-toggle" onclick="toggleAbstract(this)">
@@ -203,6 +204,7 @@ function toggleAbstract(btn) {
   btn.classList.toggle('open');
   btn.nextElementSibling.classList.toggle('open');
 }
+function toggleNav() { document.querySelector('nav').classList.toggle('open'); }
 </script>
 
 </body>
